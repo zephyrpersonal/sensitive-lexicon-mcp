@@ -1,6 +1,6 @@
 {
   "name": "sensitive-lexicon-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server for sensitive word detection using Sensitive-lexicon library",
   "main": "dist/index.js",
   "type": "module",
@@ -14,7 +14,13 @@
     "type-check": "tsc --noEmit",
     "prepublishOnly": "npm run build"
   },
-  "keywords": ["mcp", "sensitive-words", "content-moderation", "text-filtering", "llm-tools"],
+  "keywords": [
+    "mcp",
+    "sensitive-words",
+    "content-moderation",
+    "text-filtering",
+    "llm-tools"
+  ],
   "author": "Your Name",
   "license": "MIT",
   "repository": {
