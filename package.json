@@ -19,12 +19,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/sensitive-lexicon-mcp.git"
+    "url": "git+https://github.com/zephyrpersonal/sensitive-lexicon-mcp.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/sensitive-lexicon-mcp/issues"
+    "url": "https://github.com/zephyrpersonal/sensitive-lexicon-mcp/issues"
   },
-  "homepage": "https://github.com/yourusername/sensitive-lexicon-mcp#readme",
+  "homepage": "https://github.com/zephyrpersonal/sensitive-lexicon-mcp#readme",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
     "node-fetch": "^3.3.2"

@@ -26,7 +26,7 @@ npm install sensitive-lexicon-mcp
 
 ```bash
 # 克隆项目
-git clone https://github.com/yourusername/sensitive-lexicon-mcp.git
+git clone https://github.com/zephyrpersonal/sensitive-lexicon-mcp.git
 cd sensitive-lexicon-mcp
 
 # 安装依赖
