@@ -1,0 +1,27 @@
+{
+  "models": [
+    {
+      "title": "Claude 3.5 Sonnet",
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet-20241022",
+      "apiKey": "[API_KEY]"
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "sensitive-lexicon", 
+      "command": "npx",
+      "args": ["sensitive-lexicon-mcp"]
+    }
+  ],
+  "customCommands": [
+    {
+      "name": "Check Sensitive Words",
+      "prompt": "请使用sensitive-lexicon工具检测以下文本中的敏感词：{{{ input }}}"
+    },
+    {
+      "name": "Filter Sensitive Words", 
+      "prompt": "请使用sensitive-lexicon工具过滤以下文本中的敏感词：{{{ input }}}"
+    }
+  ]
+}

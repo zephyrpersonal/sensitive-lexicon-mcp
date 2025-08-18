@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "sensitive-lexicon": {
+      "command": "npx",
+      "args": ["sensitive-lexicon-mcp"],
+      "env": {
+        "SENSITIVE_UPDATE_INTERVAL": "3600",
+        "SENSITIVE_CACHE_SIZE": "10000"
+      }
+    }
+  }
+}

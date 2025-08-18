@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  sensitive-lexicon-mcp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sensitive-lexicon-mcp
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - SENSITIVE_UPDATE_INTERVAL=3600
+      - SENSITIVE_CACHE_SIZE=10000
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./logs:/app/logs
+    healthcheck:
+      test: ["CMD", "node", "-e", "process.exit(0)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - mcp-network
+
+  # 示例：与其他MCP服务一起部署
+  # other-mcp-service:
+  #   image: other-mcp:latest
+  #   networks:
+  #     - mcp-network
+
+networks:
+  mcp-network:
+    driver: bridge
+
+volumes:
+  logs:

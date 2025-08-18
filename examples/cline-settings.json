@@ -1,0 +1,11 @@
+{
+  "cline.mcpServers": {
+    "sensitive-lexicon": {
+      "command": "npx",
+      "args": ["sensitive-lexicon-mcp"],
+      "description": "Sensitive word detection and filtering using Chinese sensitive lexicon"
+    }
+  },
+  "cline.customInstructions": "When checking text content, please use the sensitive-lexicon MCP server to detect and filter sensitive words before processing.",
+  "cline.autoCheckSensitiveWords": true
+}

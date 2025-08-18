@@ -1,0 +1,72 @@
+{
+  "name": "sensitive-lexicon-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for sensitive word detection using Sensitive-lexicon library",
+  "author": "Your Name",
+  "license": "MIT",
+  "capabilities": {
+    "tools": [
+      {
+        "name": "detect_sensitive_words",
+        "description": "Detect sensitive words in text using the Sensitive-lexicon library",
+        "parameters": {
+          "text": {
+            "type": "string",
+            "required": true,
+            "description": "The text to check for sensitive words"
+          },
+          "categories": {
+            "type": "array",
+            "required": false,
+            "description": "Optional: specific categories to check"
+          }
+        }
+      },
+      {
+        "name": "filter_sensitive_words", 
+        "description": "Filter sensitive words from text by replacing them",
+        "parameters": {
+          "text": {
+            "type": "string",
+            "required": true,
+            "description": "The text to filter"
+          },
+          "replacement": {
+            "type": "string",
+            "required": false,
+            "default": "***",
+            "description": "String to replace sensitive words with"
+          },
+          "categories": {
+            "type": "array",
+            "required": false,
+            "description": "Optional: specific categories to filter"
+          }
+        }
+      },
+      {
+        "name": "get_categories",
+        "description": "Get list of available sensitive word categories"
+      },
+      {
+        "name": "get_word_count",
+        "description": "Get the number of words in the sensitive word database",
+        "parameters": {
+          "category": {
+            "type": "string",
+            "required": false,
+            "description": "Optional: get count for specific category only"
+          }
+        }
+      }
+    ]
+  },
+  "config": {
+    "transport": "stdio",
+    "environment": {
+      "NODE_ENV": "production",
+      "SENSITIVE_UPDATE_INTERVAL": "3600",
+      "SENSITIVE_CACHE_SIZE": "10000"
+    }
+  }
+}

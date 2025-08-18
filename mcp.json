@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.modelcontextprotocol.org/server.json",
+  "name": "sensitive-lexicon-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for sensitive word detection using Sensitive-lexicon library",
+  "main": "dist/index.js",
+  "executable": true,
+  "capabilities": {
+    "tools": {}
+  },
+  "config": {
+    "stdio": true
+  },
+  "metadata": {
+    "categories": ["content-moderation", "text-processing", "security"],
+    "keywords": ["sensitive-words", "content-filtering", "text-analysis", "chinese"],
+    "documentation": "https://github.com/yourusername/sensitive-lexicon-mcp#readme"
+  }
+}
