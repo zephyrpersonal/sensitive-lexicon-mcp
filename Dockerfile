@@ -6,11 +6,18 @@ WORKDIR /app
 # 复制package文件
 COPY package*.json ./
 
-# 安装依赖（只安装生产依赖）
-RUN npm ci --only=production && npm cache clean --force
+# 安装所有依赖（包括开发依赖，用于构建）
+RUN npm ci && npm cache clean --force
 
-# 复制构建好的文件
-COPY dist ./dist
+# 复制源代码和配置文件
+COPY src ./src
+COPY tsconfig.json ./
+
+# 构建项目
+RUN npm run build
+
+# 安装生产依赖（移除开发依赖以减小镜像大小）
+RUN npm ci --only=production && npm cache clean --force
 COPY mcp.json ./
 
 # 创建非root用户
