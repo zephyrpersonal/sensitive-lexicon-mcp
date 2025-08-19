@@ -16,9 +16,11 @@ COPY tsconfig.json ./
 # 构建项目
 RUN npm run build
 
-# 安装生产依赖（移除开发依赖以减小镜像大小）
-RUN npm ci --only=production && npm cache clean --force
+# 复制配置文件
 COPY mcp.json ./
+
+# 安装生产依赖（移除开发依赖以减小镜像大小，但保留已构建的dist目录）
+RUN npm ci --only=production && npm cache clean --force
 
 # 创建非root用户
 RUN addgroup -g 1001 -S nodejs && \
