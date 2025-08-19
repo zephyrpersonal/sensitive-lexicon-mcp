@@ -7,7 +7,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # 安装所有依赖（包括开发依赖，用于构建）
-RUN npm ci && npm cache clean --force
+RUN npm install && npm cache clean --force
 
 # 复制源代码和配置文件
 COPY src ./src
@@ -20,7 +20,7 @@ RUN npm run build
 COPY mcp.json ./
 
 # 安装生产依赖（移除开发依赖以减小镜像大小，但保留已构建的dist目录）
-RUN npm ci --only=production && npm cache clean --force
+RUN npm prune --production && npm cache clean --force
 
 # 创建非root用户
 RUN addgroup -g 1001 -S nodejs && \
