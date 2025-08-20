@@ -1,5 +1,7 @@
 # Sensitive Lexicon MCP Server
 
+[![MCP Badge](https://lobehub.com/badge/mcp/zephyrpersonal-sensitive-lexicon-mcp)](https://lobehub.com/mcp/zephyrpersonal-sensitive-lexicon-mcp)
+
 一个基于 [Sensitive-lexicon](https://github.com/konsheng/Sensitive-lexicon) 敏感词库的 MCP (Model Context Protocol) 服务器，为LLM提供敏感词检测和过滤功能。
 
 ## 功能特性

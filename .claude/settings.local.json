@@ -6,7 +6,10 @@
       "WebFetch(domain:api.github.com)",
       "Bash(mkdir:*)",
       "Bash(npm install)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "mcp__sensitive-lexicon-mcp__detect_sensitive_words",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": []
   }
